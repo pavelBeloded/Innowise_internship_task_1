@@ -8,8 +8,7 @@
 
 @font-face {
   font-family: "League Gothic";
-  src: url("../assets/fonts/LeagueGothic-Regular-VariableFont_wdth.ttf")
-    format("truetype");
+  src: url("../assets/fonts/LeagueGothic-Regular-VariableFont_wdth.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -19,6 +18,14 @@
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins-SemiBold.ttf") format("truetype");
   font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -35,14 +42,20 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Inter";
+}
+
+body {
+  font-family: "Inter", sans-serif;
   font-weight: 400;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
-    max-width: 1280px;
-    width: 100%;
-    margin: auto;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .header {
@@ -51,44 +64,172 @@
   align-items: center;
   padding: 15px 24px 14px;
 }
+
 .header__logo {
-  color: var(--accent-color);
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 24px;
-  font-family: "Poppins";
+  color: var(--accent-color);
   padding-left: 8px;
+}
+
+.header__links {
+  display: flex;
+  gap: 16px;
+  justify-self: center;
+}
+
+.link {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0 8px;
 }
 
 .button {
   padding: 10px 24px;
+  height: 40px;
   background: var(--accent-color);
   color: var(--accent-text-color);
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 14px;
   border-radius: 8px;
   outline: none;
   border: 0;
+  cursor: pointer;
   justify-self: end;
 }
 
-.header__links {
-  justify-self: center;
+.section {
+  margin-top: 40px;
+}
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.main-article__img {
+  width: 620px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.main-article__title {
+  font-family: "League Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 1.1;
+}
+
+.main-article__subtitle {
+  margin-top: 24px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.top-articles__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.top-articles__title {
+  padding-left: 48px;
+  margin-bottom: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: var(--accent-color);
+}
+
+.article {
   display: flex;
   gap: 16px;
+  align-items: flex-start;
 }
 
-.link {
-  padding: 0 8px;
-  font-family: Inter;
-  font-weight: 400;
-  font-style: Regular;
+.article__number {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
   font-size: 16px;
-  color: var(--text-color);
-  text-decoration: none;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  width: 32px;
+  height: 32px;
+  background: var(--buble-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
 
+.article__content {
+  width: 355px;
+}
+
+.article__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.article__author {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.article__info {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--secondaty-text-color);
 }
 
 
-.section {
-    margin-top: 40px;
+.article__info__comments {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+  display: block;
+  width: 1px;
+  height: 24px;
+  background: var(--secondaty-text-color);
+}
+
+.article_img {
+  display: block;
+}
+
+.comment__img {
+    margin-right: 10px;
+}
+
+.article__img {
+    width: 200px;
 }
