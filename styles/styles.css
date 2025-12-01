@@ -51,6 +51,7 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .container {
@@ -127,7 +128,7 @@ body {
 .main-article__title {
   font-family: "League Gothic", sans-serif;
   font-weight: 400;
-  font-size: 72px;
+  font-size: 4.5rem;
   line-height: 1.1;
 }
 
@@ -135,7 +136,7 @@ body {
   margin-top: 24px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
 }
 
@@ -150,7 +151,7 @@ body {
   margin-bottom: 16px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   text-transform: capitalize;
   color: var(--accent-color);
@@ -159,13 +160,13 @@ body {
 .article {
   display: flex;
   gap: 16px;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .article__number {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -186,7 +187,7 @@ body {
 .article__title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 1.4;
   color: var(--text-color);
   margin-bottom: 8px;
@@ -195,7 +196,7 @@ body {
 .article__author {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--accent-color);
@@ -208,7 +209,7 @@ body {
   align-items: center;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--secondaty-text-color);
@@ -222,7 +223,7 @@ body {
 .vertical-line {
   display: block;
   width: 1px;
-  height: 24px;
+  height: 1.5rem;
   background: var(--secondaty-text-color);
 }
 
@@ -251,11 +252,17 @@ body {
 }
 
 .story-card {
-  width: 100%;
+  /* width: 100%; */
   max-width: 290px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.story-card__img {
+  max-width: 100%;
+  height: auto;
 }
 
 .story-card__title {
@@ -276,12 +283,13 @@ body {
 
 .footer {
   padding: 80px;
+  border-top: 1px solid var(--secondaty-text-color);
 }
 
 .footer__logo {
   font-family: Poppins;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 100%;
   color: var(--text-color);
 
@@ -297,15 +305,92 @@ body {
   margin-right: 5px;
   font-family: Inter;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 160%;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-color);
 }
 
-.footer__link:not(last-of-child)::after {
+.footer__link::after {
   content: "/";
   margin-left: 5px;
   color: var(--text-color);
+}
+
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* width 1024 */
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 12px;
+  }
+
+
+  .container {
+    padding: 0 64px;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 15px;
+  }
+
+  .main-article__img {
+    grid-row: span 2;
+    max-width: 350px;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .main-article__title {
+    align-self: flex-end;
+  }
+
+  
+  .top-articles__title {
+    padding-left: 146px;
+  }
+
+  .top-articles__container {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .article {
+    justify-content: center;
+  }
+
+  .article__content {
+    width: 60%;
+  }
+
+  .article__img {
+    justify-self: end;
+  }
+
+  .stories__grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .story-card {
+    align-self: center;
+  }
+
+  .footer {
+    padding: 32px;
+  }
+
 }
