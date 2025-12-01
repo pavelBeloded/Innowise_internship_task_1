@@ -235,6 +235,10 @@ body {
   width: 200px;
 }
 
+.stories {
+  padding-bottom: 80px;
+}
+
 .stories__grid {
   display: grid;
   grid-template-columns: repeat(4, 290px);
@@ -242,9 +246,9 @@ body {
 }
 
 .story-card {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .story-card__title {
@@ -267,4 +271,35 @@ body {
   color: var(--text-color);
 }
 
+.footer {
+  padding: 80px;
+}
 
+.footer__logo {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 100%;
+  color: var(--text-color);
+
+  margin-bottom: 24px;
+}
+
+.footer__links {
+  display: flex;
+  list-style: none;
+}
+
+.footer__link {
+    margin-right: 5px;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 160%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+}
