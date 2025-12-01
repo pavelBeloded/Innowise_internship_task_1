@@ -254,20 +254,16 @@ body {
 .story-card__title {
   font-family: Inter;
   font-weight: 700;
-  font-style: Bold;
   font-size: 22px;
   line-height: 140%;
-  vertical-align: middle;
   color: var(--text-color);
 }
 
 .story-card__subtitle {
   font-family: Inter;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
   line-height: 160%;
-  vertical-align: middle;
   color: var(--text-color);
 }
 
@@ -278,7 +274,6 @@ body {
 .footer__logo {
   font-family: Poppins;
   font-weight: 600;
-  font-style: SemiBold;
   font-size: 24px;
   line-height: 100%;
   color: var(--text-color);
@@ -295,10 +290,8 @@ body {
     margin-right: 5px;
   font-family: Inter;
   font-weight: 400;
-  font-style: Regular;
   font-size: 18px;
   line-height: 160%;
-  vertical-align: middle;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-color);
