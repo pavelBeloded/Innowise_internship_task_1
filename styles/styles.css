@@ -75,6 +75,7 @@ body {
 }
 
 .header__links {
+  list-style: none;
   display: flex;
   gap: 16px;
   justify-self: center;
@@ -211,7 +212,7 @@ body {
   color: var(--secondaty-text-color);
 }
 
-.article__info__comments {
+.article__comments {
   display: flex;
   align-items: center;
 }
@@ -287,12 +288,18 @@ body {
 }
 
 .footer__link {
-    margin-right: 5px;
+  margin-right: 5px;
   font-family: Inter;
   font-weight: 400;
   font-size: 18px;
   line-height: 160%;
   text-transform: uppercase;
   text-decoration: none;
+  color: var(--text-color);
+}
+
+.footer__link:not(last-of-child)::after {
+  content: "/";
+  margin-left: 5px;
   color: var(--text-color);
 }
