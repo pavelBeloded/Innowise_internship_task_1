@@ -1,4 +1,4 @@
-🚀 **Live Demo:** [Insert your GitHub Pages Link Here]([https://username.github.io/repo-name](https://pavelbeloded.github.io/Innowise_internship_task_1/))
+🚀 **Live Demo:** [link](https://pavelbeloded.github.io/Innowise_internship_task_1/)
 
 ---
 
@@ -52,3 +52,4 @@ Clone the repository:
 git clone https://github.com/pavelBeloded/Innowise_internship_task_1.git
 ```
 Open index.html in your browser.
+
