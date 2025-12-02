@@ -91,7 +91,37 @@ body {
   padding: 0 8px;
 }
 
-.button {
+.header__burger-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+
+.header__burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  left: 5px;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+}
+
+.header__burger-btn span:nth-child(1) {
+  top: 10px;
+}
+.header__burger-btn span:nth-child(2) {
+  top: 18px;
+}
+.header__burger-btn span:nth-child(3) {
+  top: 26px;
+}
+
+.header__button {
   padding: 10px 24px;
   height: 40px;
   background: var(--accent-color);
@@ -331,7 +361,6 @@ body {
     font-size: 12px;
   }
 
-
   .container {
     padding: 0 64px;
   }
@@ -358,7 +387,6 @@ body {
     align-self: flex-end;
   }
 
-  
   .top-articles__title {
     padding-left: 146px;
   }
@@ -392,5 +420,60 @@ body {
   .footer {
     padding: 32px;
   }
+}
 
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .header__burger-btn {
+    display: block;
+  }
+
+  .header__nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 80px 20px 40px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
+    visibility: hidden;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 0.4s;
+    z-index: 10;
+  }
+
+  .header__links {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    font-size: 20px;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header.open .header__nav {
+    transform: translateY(0); 
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0; 
+  }
+  .header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
