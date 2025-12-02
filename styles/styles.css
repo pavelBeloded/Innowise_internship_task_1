@@ -283,11 +283,11 @@ body {
 
 .story-card {
   /* width: 100%; */
-  max-width: 290px;
+  max-width: 18.125rem;
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .story-card__img {
@@ -298,7 +298,7 @@ body {
 .story-card__title {
   font-family: Inter;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 140%;
   color: var(--text-color);
 }
@@ -306,7 +306,7 @@ body {
 .story-card__subtitle {
   font-family: Inter;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 160%;
   color: var(--text-color);
 }
@@ -388,7 +388,7 @@ body {
   }
 
   .top-articles__title {
-    padding-left: 146px;
+    padding-left: 9.125rem;
   }
 
   .top-articles__container {
@@ -423,6 +423,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -462,7 +470,7 @@ body {
   }
 
   .header.open .header__nav {
-    transform: translateY(0); 
+    transform: translateY(0);
     visibility: visible;
     opacity: 1;
   }
@@ -471,9 +479,61 @@ body {
     transform: translateY(8px) rotate(45deg);
   }
   .header.open .header__burger-btn span:nth-child(2) {
-    opacity: 0; 
+    opacity: 0;
   }
   .header.open .header__burger-btn span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .main-article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 450px;
+    margin: auto;
+    /* padding: 0 50px; */
+  }
+
+  .main-article__img {
+    justify-self: unset;
+    align-self: unset;
+  }
+
+  .main-article__title {
+    align-self: unset;
+  }
+
+  .main-article__subtitle {
+    display: none;
+  }
+
+  .footer__links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-article__img {
+    max-width: 300px;
+  }
+  .article__img {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main-article__img {
+    max-width: 300px;
+  }
+
+  .article {
+    height: 85px;
+  }
+
+  .top-articles__container {
+    gap: 50px
+  }
+  .article__img {
+    max-width: 100px;
   }
 }
